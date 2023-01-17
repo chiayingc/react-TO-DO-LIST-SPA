@@ -1,0 +1,9 @@
+body{
+    background-color: rgb(255, 246, 224);
+}
+#text{
+    margin-right: 20px;
+}
+li{
+    list-style: none;
+}
