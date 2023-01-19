@@ -38,6 +38,7 @@ class MyForm extends React.Component{
         Msgs.push(this.state.msg);
         this.setState((currentState)=>({countMsg:currentState.countMsg+1}));
         this.setState({Msgs:Msgs});
+        this.setState({msg:""});
     }
 }
 
