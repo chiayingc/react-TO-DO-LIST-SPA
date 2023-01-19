@@ -1,7 +1,26 @@
 import React, { useState } from 'react'
 import AddForm from './AddForm'
 
+// function removeMsg(e){
+//     // console.log("rm1",allMsgs,id);
+//     e.stopPropagation();
+//     console.log("hihi");
+//     console.log(e.msg);
+// }
 function List({ allMsgs, removeMsg }) {
+// function List({ allMsgs}) {
+    // const [allMsgs,setAllMsgs]=useState(allMsgs);
+    // function removeMsg(e){
+    //     // console.log("rm1",allMsgs,id);
+    //     e.stopPropagation();
+    //     console.log("hihi");
+    //     console.log(allMsgs);
+    //     console.log(e.target.id);
+    //     let id=e.target.id.replace("dlt","");
+    //     const removeAry=[...allMsgs].filter(msg=>msg.record!=id);
+    //     setAllMsgs(removeAry);
+    //     console.log(allMsgs);
+    // }
 
     let len = allMsgs.length;
     // console.log("len",len);
@@ -11,7 +30,7 @@ function List({ allMsgs, removeMsg }) {
     }
     else {
 
-        console.log(444, allMsgs);
+        // console.log(444, allMsgs);
 
         for (let j = 0; j < allMsgs.length; j++) {
 
@@ -19,7 +38,7 @@ function List({ allMsgs, removeMsg }) {
                 <div id={"msg" + allMsgs[j]["record"]}>
                     {allMsgs[j]["msg"]}
                 </div>
-                <button id={"dlt" + allMsgs[j]["record"]} onClick={removeMsg(j+1)} >刪除</button>
+                <button id={"dlt" + allMsgs[j]["record"]} onClick={removeMsg} >刪除</button>
             </div>
             msgList.push(oneMsg);
         }

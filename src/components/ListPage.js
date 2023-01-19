@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import AddForm from './AddForm';
 import List from './List';
 
-let newAllMsgs=[];
 
 function ListPage() {
     const [allMsgs,setAllMsgs]=useState([]);
@@ -15,13 +14,34 @@ function ListPage() {
         let newAllMsgs=[...allMsgs,msg] //把新的訊息加入訊息列表
         setAllMsgs(newAllMsgs);
     }
+    
+    function removeMsg(e){
+        // console.log("rm1",allMsgs,id);
+        e.stopPropagation();
+        // console.log("hihi");
+        // console.log(allMsgs);
+        // console.log(e.target.id);
+        let id=e.target.id.replace("dlt","");
+        const removeAry=[...allMsgs].filter(msg=>msg.record!=id);
+        console.log(1,allMsgs);
+        console.log(2,removeAry);
+        setAllMsgs(removeAry);
 
-    function removeMsg(record){
-        console.log("rm1",record);
-        // const removeArr=[...allMsgs].filter(msg=>msg.record!==record);
+        console.log(3,allMsgs);
+    }
+
+
+    // function removeMsg(e){
+    //     // console.log("rm1",allMsgs,id);
+    //     e.stopPropagation();
+    //     console.log("hihi");
+
+  
+        // console.log([...allMsgs]);
+        // const removeArr=[...allMsgs].filter(msg=>msg.record!==id);
         // setAllMsgs(removeArr);
         // console.log("rm");
-    }
+    // }
 
     // function CompleteMsg(id){
     //     let updatedMsgs=msgList.map((msg)=>{
