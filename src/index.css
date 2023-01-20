@@ -1,0 +1,113 @@
+body {
+    display: grid;
+    justify-items: center;
+}
+
+#title {
+    color: rgb(48, 50, 89);
+    font-size: 24px;
+    font-weight: 500;
+}
+
+#main,
+#main>div {
+    width: 70%;
+    display: grid;
+    justify-items: center;
+}
+
+hr {
+    width: 100%;
+    margin: 15px;
+}
+
+.addForm, #msgList>div{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 10px;
+}
+
+#msgList{
+    width: 100%;
+    display: grid;
+    grid-template-columns:100%;
+    row-gap: 10px;
+} 
+
+.newmsg_textbox {
+    background-color: #FFFFFF;
+    border: 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: .75rem 1rem;
+    text-align: left;
+    vertical-align: baseline;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    outline: none;
+    touch-action: manipulation;
+}
+
+.newmsg_textbox::placeholder{
+    color:#62646881;
+}
+
+.newmsg_btn {
+    background-color: #FFFFFF;
+    border: 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #111827;
+    font-size: 16px;
+    padding: .75rem 1rem;
+    text-align: center;
+    vertical-align: baseline;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.newmsg_btn:hover {
+    background-color: rgb(249, 250, 251);
+}
+
+.newmsg_btn:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.newmsg_btn:focus-visible {
+    box-shadow: none;
+}
+
+.msg{
+    background-color: #FFFFFF;
+    border: rgba(219, 217, 217, 0.7) 1px solid;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 18px;
+    padding: .75rem 1rem;
+    text-align: left;
+    vertical-align: baseline;
+}
+
+.dlt_btn{
+    background-color: #d1d1d134;
+    border: 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #111827;
+    font-size: 16px;
+    padding: .75rem 1rem;
+    text-align: center;
+    vertical-align: baseline;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+}

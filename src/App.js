@@ -1,7 +1,6 @@
 import React from "react";
-import AddForm from "./components/AddForm.js";
-import List from"./components/List.js";
 import ListPage from "./components/ListPage.js";
+import "./index.css";
 
 function Title() {
     return (
@@ -11,12 +10,8 @@ function Title() {
 
 function App() {
     return (
-        <div>
         <ListPage/>
-        </div>
-
     );
 }
-
 
 export { Title, App };
