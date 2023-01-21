@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import AddForm from './AddForm';
 import List from './List';
+import "../listpage.css";
 
 
 function ListPage() {
@@ -19,19 +20,34 @@ function ListPage() {
         let id=e.target.id.replace("dlt","");
         const removeAry=[...allMsgs].filter(msg=>msg.record!=id);
         setAllMsgs(removeAry);
+    }
 
-        console.log(3,allMsgs);
+    function goHome(){
+        window.location.href="/";
+    }
+
+    function Title() {
+        return (
+            <h3>To Do List SPA</h3>
+        );
     }
 
     return (
         <div>
-            <hr/>
-            <AddForm onSubmit={addNewMsg} />
-            <hr/>
-            <List 
-              allMsgs={allMsgs}
-              removeMsg={removeMsg}
-            />
+            <div id="title">
+                <Title />
+            </div>
+            <div id="main">
+                <hr/>
+                <AddForm onSubmit={addNewMsg} />
+                <hr/>
+                <List 
+                allMsgs={allMsgs}
+                removeMsg={removeMsg}
+                />
+                <button id="gohome_btn" onClick={goHome}>返回首頁</button>
+            </div>
+            
         </div>
     )
 }

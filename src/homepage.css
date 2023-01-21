@@ -1,0 +1,66 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: boder-box;
+    font-family: 'Noto Sans TC';
+}
+
+body>div{
+    display: grid;
+    width: 100%;
+    justify-items: center;
+}
+
+#home_title {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(48, 50, 89);
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#home_slogan {
+    width: 100%;
+    background-color: rgb(209, 210, 236);
+    color: #000;
+    font-size: 24px;
+    font-weight: 500;
+    height: 400px;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+}
+
+#home_btn {
+    margin-top: 30px;
+    background-color: #FFFFFF;
+    border: 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #111827;
+    font-size: 16px;
+    font-weight: 500;
+    padding: .75rem 1rem;
+    text-align: center;
+    vertical-align: baseline;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+#home_btn:hover {
+    background-color: rgb(249, 250, 251);
+}
+
+#home_btn:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+#home_btn:focus-visible {
+    box-shadow: none;
+}

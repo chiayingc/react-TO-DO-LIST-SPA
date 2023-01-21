@@ -7,11 +7,12 @@ body {
     color: rgb(48, 50, 89);
     font-size: 24px;
     font-weight: 500;
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 
-#main,
-#main>div {
-    width: 70%;
+#main {
+    width: 50%;
     display: grid;
     justify-items: center;
 }
@@ -53,7 +54,7 @@ hr {
     color:#62646881;
 }
 
-.newmsg_btn {
+.newmsg_btn, #gohome_btn {
     background-color: #FFFFFF;
     border: 0;
     border-radius: 5px;
@@ -70,17 +71,21 @@ hr {
     touch-action: manipulation;
 }
 
-.newmsg_btn:hover {
+.newmsg_btn:hover, #gohome_btn:hover {
     background-color: rgb(249, 250, 251);
 }
 
-.newmsg_btn:focus {
+.newmsg_btn:focus, #gohome_btn:focus {
     outline: 2px solid transparent;
     outline-offset: 2px;
 }
 
-.newmsg_btn:focus-visible {
+.newmsg_btn:focus-visible, #gohome_btn:focus-visible {
     box-shadow: none;
+}
+
+#gohome_btn{
+    margin-top: 20px;
 }
 
 .msg{
