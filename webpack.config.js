@@ -1,7 +1,8 @@
-const path=require("path");
+// const path = require("path");
+import { path } from "path";
 
 module.exports={
-    mode:"production",  //production
+    mode:"development",  //production
     entry:"./src/index.js",
     output:{
         filename:"main.js",
@@ -29,11 +30,16 @@ module.exports={
     },
     devServer:{
       port:9000,
-      static:"./dist"
+      static:"./dist",
+      allowedHosts: ['all'],
+      historyApiFallback: true,
+      
     },
     performance: {
-      hints: 'error', 
-      maxAssetSize: 300000, 
-      maxEntrypointSize: 500000 
-    }
+      hints: false
+    },
+    externals:{
+      fs:'commonjs fs'
+    },
+    devtool:'inline-source-map'
 };

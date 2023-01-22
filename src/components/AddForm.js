@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-
+import React, { useEffect, useState } from 'react';
 
 function AddForm(props) {
+    let now=Date.now();
     const [newMsg, setNewMsg] = useState("");
-    const [countMsg,setCountMsg]=useState(1);
- 
+    const [countMsg,setCountMsg]=useState(now);
+
     function handleNewMsg(e){
         setNewMsg(e.target.value);
     }
@@ -17,7 +17,7 @@ function AddForm(props) {
         });
 
         setNewMsg('');
-        setCountMsg(countMsg+1);
+        setCountMsg(now);
     };
 
     return (

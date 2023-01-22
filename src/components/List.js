@@ -5,15 +5,15 @@ function List({ allMsgs, removeMsg }) {
 
     let len = allMsgs.length;
     let msgList = [];
-    if (len < 1) {
-        msgList.push(<div></div>);
-    }
-    else {
+    // if (len < 1) {
+    //     msgList.push(<div></div>);
+    // }
+    // else {
 
         for (let j = 0; j < allMsgs.length; j++) {
 
-            let oneMsg = <div>
-                <div id={"msg" + allMsgs[j]["record"]} className="msg">
+            let oneMsg = <div key={allMsgs[j]["record"]} brand={allMsgs[j]["msg"]}>
+                <div  id={"msg" + allMsgs[j]["record"]} className="msg">
                     {allMsgs[j]["msg"]}
                 </div>
                 <button id={"dlt" + allMsgs[j]["record"]} onClick={removeMsg} className="dlt_btn" >刪除</button>
@@ -21,7 +21,7 @@ function List({ allMsgs, removeMsg }) {
             msgList.push(oneMsg);
         }
         
-    }
+    // }
 
     return <div id="msgList">{msgList}</div>;
 }
