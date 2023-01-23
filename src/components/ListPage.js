@@ -7,6 +7,7 @@ import { deleteDoc } from 'firebase/firestore';
 import { onSnapshot  } from 'firebase/firestore';
 import { doc } from 'firebase/firestore';
 import { db } from '../../firebase-config.js'
+import { Link } from 'react-router-dom';
 
 function ListPage() {
     const [allMsgs,setAllMsgs]=useState([]);
@@ -61,10 +62,6 @@ function ListPage() {
         setAllMsgs(removeAry);
     }
 
-    function goHome(){
-        window.location.href="/";
-    }
-
     function Title() {
         return (
             <h3>To Do List SPA</h3>
@@ -84,7 +81,7 @@ function ListPage() {
                 allMsgs={allMsgs}
                 removeMsg={removeMsg}
                 />
-                <button id="gohome_btn" onClick={goHome}>返回首頁</button>
+                <button id="gohome_btn"><Link to={"/"}>返回首頁</Link></button>
             </div>
             
         </div>

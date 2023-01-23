@@ -1,11 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import "../homepage.css";
 
 function HomePage() {
-
-  function start(){
-    window.location.href="/list";
-  }
 
   return (
     <div>
@@ -15,7 +12,7 @@ function HomePage() {
       <div id='home_slogan'>
         <h3>歡迎光臨我的頁面</h3>
       </div>
-      <button id='home_btn' onClick={start}>點此開始</button>
+      <button id='home_btn'><Link to={"/list"}>點此開始</Link></button>
     </div>
   )
 }
